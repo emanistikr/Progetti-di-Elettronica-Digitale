@@ -27,18 +27,3 @@ __pycache__/
 
 #Ignoriamo la cartella che l'editor utilizza per mettere i file temporanei
 .texpadtmp/
-
-#Ignoriamo i file automatici del finder Mac
-.DS_Store
-
-#Ignoriamo i bin
-bin/
-
-#Ignoriamo i file del progetto Eclipse
-.classpath
-.project
-.settings/
-
-#Ignoriamo i file del progetto InelliJ
-.idea/
-.metadata/
