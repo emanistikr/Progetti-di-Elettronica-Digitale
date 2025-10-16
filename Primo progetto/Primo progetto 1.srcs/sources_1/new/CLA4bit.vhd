@@ -19,3 +19,4 @@ begin
     cout <= c(4);
     s <= p xor c(3 downto 0);
 end MyCLA4bit;
+
