@@ -15,15 +15,27 @@ begin
     CUT : CLA4bit port map ( A, B, cin, cout, S );
 	cin <= '0';
 	process begin
+	   -- No overflow
 		A <= "0000";
 		B <= "0000";
+		wait for 10ns;
+		A <= "1111";
+		B <= "0000";
+		wait for 10 ns;
+		-- Tutti overflow
+		A <= "1111";
+		B <= "1111";
 		wait for 10 ns;
 		A <= "1111";
 		B <= "0001";
 		wait for 10 ns;
-		A <= "1111";
-		B <= "0000";
+		-- overflow msb 
+		A <= "1000";
+		B <= "1000";
 		wait for 10 ns;
-		
+		-- zeri ed uni alternati 
+		A <= "1010";
+		B <= "0101";
+		wait for 10 ns;
 	end process;
 end MySimCLA;
